@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Breaking News Today, Top Headlines, Live Updates | The Hindu</title>
+        <style>
+            *{
+                font-family: serif;
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                font-size: 1rem;
+                font-weight: 400;
+                color: black;
+                background-color: white;
+                line-height: 1.5;
+            }
+            section{
+                display: block;
+                clear: both;
+                width: 100%;
+                margin: 40px auto;
+            }
+            .aa1{
+                position: absolute;
+                top: -1px;
+                z-index: 15;
+                width: 100%;
+                border-bottom: 5px solid gray;
+                align-items: center;
+                justify-content: center;
+            }
+            .aa2{
+                max-width: 1300px;
+                display: block;
+                width: 100%;
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            @media (min-width: 576px){
+                .aa2{
+                    max-width: 540px;
+                }
+            }
+            @media (min-width: 768px){
+                .aa2{
+                    max-width: 720px;
+                }
+            }
+            @media (min-width: 992px){
+                .aa2{
+                    max-width: 960px;
+                }
+            }
+            @media (min-width: 1200px){
+                .aa2{
+                    max-width: 1140px;
+                }
+            }
+            @media (min-width: 1400px){
+                .aa2{
+                    max-width: 1320px;
+                }
+            }
+            .aa3{
+                display: flex;
+                flex-direction: row;
+                padding-top: 30px;
+                margin: 0 auto;
+                text-align: center;
+                width: 500px;
+                position: relative;
+            }
+            .aa4{
+                flex: 0 0 auto;
+                width: 100%;
+            }
+            .aa5{
+                height: 45px;
+                width: 475px;
+            }
+            a,button{
+                cursor: pointer;
+                text-decoration: none;
+            }
+            .aa6{
+                position: relative;
+            }
+            .aa7{
+                z-index: 3;
+                max-width: 980px;
+                margin: 0 auto;
+                position: relative;
+            }
+            .aa8{
+                border: 0;
+                padding: 30px 0 17px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            @media (min-width: 992px){
+                .aa8{
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
+                }
+            }
+            .aa9{
+                max-width: 980px;
+            }
+            .ab1{
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 0;
+                list-style: none;
+                padding-left: 0;
+            }
+            @media (min-width: 992px){
+                .ab1{
+                    flex-direction: row;
+                    margin-bottom: 0;
+                }
+            }
+            dl,ol,ul{
+                margin-top: 0;
+                margin-bottom: 1rem;
+            }
+            @media (min-width: 992px){
+                .ab3{
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                }
+            }
+            .ab3{
+                display: block;
+                color: black;
+                font-size: 18px;
+                font-weight: 700;
+                padding-left: 0;
+                padding-right: 0;
+                margin-right: 19px;
+                border-top: 5px solid black;
+                width: 170px;
+                position: relative;
+                padding-top: 2px;
+                font-family: serif;
+            }
+            #ab31{
+                margin-right: 0;
+            }
+            .ab4{
+                margin: 0;
+                padding: 35px 0 7px;
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+            }
+            .ab5{
+                padding-left: 0;
+            }
+            .ab6{
+                color: rgb(153, 37, 54);
+                font-size: 12px;
+                text-decoration: none;
+                letter-spacing: .7px;
+                padding-right: 5px;
+                font-weight: 500;
+            }
+            .ab7{
+                color: black;
+                opacity: 0.8;
+                margin-left: 10px;
+                padding-left: 4px;
+                font-size: 12px;
+                padding-top: 4px;
+                text-decoration: none;
+            }
+            .ab8{
+                width: 14px;
+                height: 13px;
+                position: relative;
+                top: 1.5px;
+                margin-left: 3px;
+            }
+            .ac1{
+                position: absolute;
+                right: 3px;
+                top: 95px;
+                display: block;
+            }
+            .ac2{
+                background: none;
+                border: 0;
+                color: black;
+                font-weight: 600;
+                width: max-content;
+                height: auto;
+                padding: 0;
+                line-height: normal;
+                margin-right: 24px;
+                position: relative;
+                font-size: 14px;
+                font-family: sans-serif;
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                vertical-align: middle;
+            }
+            .ac3{
+                height: 26px;
+                width: 26px;
+                position: absolute;
+                left: -31px;
+                top: 6px;
+            }
+            .ac4{
+                display: inline-block;
+                background: rgb(176 0 32);
+                border-radius: 3px;
+                border: 1px solid rgb(176 0 32);
+                color: white;
+                font-size: 14px;
+                font-family: sans-serif;
+                padding: 9px 0px;
+                width: 125px;
+            }
+            .ac5{
+                display: inline-block;
+                background: white;
+                border-radius: 3px;
+                border: 1px solid rgb(176 0 32);
+                color: rgb(176 0 32);
+                font-size: 14px;
+                font-family: sans-serif;
+                padding: 9px 0px;
+                width: 125px;
+            }
+            .ac6{
+                position: absolute;
+                right: 4px;
+                top: 29px;
+                cursor: pointer;
+                border: 1px solid rgba(141,141,141,0.6);
+                border-radius: 4px;
+                padding: 4px 6px;
+                width: 25px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .ac8{
+                height: 100px;
+            }
+            .ad1{
+                margin-bottom: 40px;
+                padding: 20px 0px 10px;
+                background-image: url(https://t4.ftcdn.net/jpg/01/44/67/75/360_F_144677596_QJEsoGu2jNbDYic6QyYKcj8Evyh3356K.jpg);
+            }
+            .ad2{
+                max-width: 1300px;
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            @media (min-width: 576px){
+                .ad2{
+                    width: 540px;
+                }
+            }
+            @media (min-width: 768px){
+                .ad2{
+                    width: 720px;
+                }
+            }
+            @media (min-width: 992px){
+                .ad2{
+                    width: 960px;
+                }
+            }
+            @media (min-width: 1200px){
+                .ad2{
+                    width: 1140px;
+                }
+            }
+            @media (min-width: 1400px){
+                .ad2{
+                    width: 1320px;
+                }
+            }
+            .ad2{
+                max-width: 1300px;
+            }
+            #ad21{
+                padding: 0 0.75rem;
+            }
+            .ad3{
+                display: block;
+                clear: both;
+                width: 100%;
+                margin: 40px auto;
+            }
+            .ad4{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 calc(1.5rem * -.5);
+            }
+            .ad5{
+                display: flex;
+                vertical-align: top;
+                width: 100%;
+                max-width: 100%;
+                flex-shrink: 0;
+            }
+            @media (min-width: 576px){
+                .ad5{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            @media (min-width: 768px){
+                .ad5{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            @media (min-width: 992px){
+                .ad5{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            @media (min-width: 1200px){
+                .ad5{
+                    flex: 0 0 auto;
+                    width: 25%;
+                }
+            }
+            .ad8{
+                margin: 0 0 20px;
+                font-weight: 900;
+                text-align: left;
+                line-height: 1.2;
+                text-decoration: none;
+            }
+            .ad9{
+                width: 240px;
+                padding-right: 60px;
+                position: relative;
+                min-height: auto;
+                border-bottom: 1px solid rgb(199, 198, 198);
+            }
+            .ae1{
+                color: rgb(176 0 32);
+                font-size: 35px;
+                font-family: serif;
+            }
+            @media (min-width: 1200px){
+                .ae1{
+                    font-size: 1.5rem;
+                }
+            }
+            .ae2{
+                color: black;
+                font-size: 20px;
+                font-weight: 500;
+                letter-spacing: -0.4px;
+                line-height: 0;
+                font-family: serif;
+            }
+            .ae3{
+                text-decoration: none;
+                margin-top: 5px;
+                text-align: left;
+                margin: 10px 0 10px;
+                width: 95%;
+            }
+            .ae4{
+                margin: 15px 0;
+                text-align: left;
+            }
+            .ae5{
+                color: black;
+                font-size: 11px;
+                font-weight: 500;
+                line-height: 14px;
+                text-transform: uppercase;
+                margin-right: 10px;
+                text-decoration: underline;
+            }
+            .ae6{
+                position: absolute;
+                right: 0;
+                bottom: 15px;
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+            }
+            .ae8{
+                height: 52px;
+                width: 52px;
+                border-radius: 9999px;
+            }
+            #ad91{
+                border-bottom: none;
+            }
+            .af3{
+                width: 300px;
+            }
+            .af5{
+                width: 300px;
+            }
+            .af6{
+                min-height: auto;
+                margin-top: 0;
+                width: 100%;
+                border-bottom: 1px solid rgb(199, 198, 198);
+            }
+            .af7{
+                text-transform: uppercase;
+                text-align: left;
+                margin: 15px 0 5px;
+            }
+            .af2{
+                color: rgb(176 0 32);
+                font-family: "Merriweather Sans",sans-serif;
+                font-weight: bold;
+                font-size: 14px;
+            }
+            .af8{
+                font-weight: normal;
+                line-height: normal;
+                text-align: left;
+                margin: 10px 0 20px;
+            }
+            .af9{
+                font-family: "Merriweather Sans",serif;
+                font-size: 21px;
+                letter-spacing: -0.4px;
+                color: black;
+            }
+            .ag1{
+                position: relative;
+                height: max-content;
+            }
+            .ag1{
+                display: flex;
+                flex-direction: column;
+                vertical-align: top;
+                width: 100%;
+                max-width: 100%;
+                flex-shrink: 0;
+            }
+            @media (min-width: 576px){
+                .ag1{
+                    flex: 0 0 auto;
+                    width: 100%;
+                }
+            }
+            @media (min-width: 768px){
+                .ag1{
+                    flex: 0 0 auto;
+                    width: 100%;
+                }
+            }
+            @media (min-width: 992px){
+                .ag1{
+                    flex: 0 0 auto;
+                    width: 100%;
+                }
+            }
+            @media (min-width: 1200px){
+                .ag1{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            .ag2{
+                margin: 15px 0 5px;
+                text-align: left;
+                text-transform: uppercase;
+            }
+            .ag3{
+                color: rgb(176 0 32);
+                font-size: 14px;
+                font-weight: bold;
+                font-family: sans-serif;
+            }
+            .ag4{
+                margin: 10px 0 15px;
+                line-height: normal;
+                width: 625px;
+            }
+            .ag5{
+                font-size: 44px;
+                font-weight: bolder;
+                font-family: serif;
+                text-decoration: none;
+                color: black;
+                letter-spacing: -0.4px;
+            }
+            .ag6{
+                text-align: left;
+                margin: 10px 0;
+            }
+            .ag7{
+                color: black;
+                font-size: 20px;
+                letter-spacing: -0.3px;
+            }
+            .ag8{
+                padding-bottom: 15px;
+                border-bottom: 1px solid rgb(199, 198, 198);
+            }
+            .ag9{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+            .ah1{
+                position: relative;
+                height: max-content;
+                width: 100%;
+                flex-shrink: 0;
+                max-width: 100%;
+            }
+            @media (min-width: 576px){
+                .ah1{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            @media (min-width: 768px){
+                .ah1{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            @media (min-width: 992px){
+                .ah1{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            @media (min-width: 1200px){
+                .ah1{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            .ah2{
+                width: 100%;
+            }
+            #ae42{
+                border-bottom: 1px solid rgb(199, 198, 198);
+                padding-bottom: 10px;
+            }
+            .ah3{
+                vertical-align: top;
+                width: 100%;
+                max-width: 100%;
+                flex-shrink: 0;
+            }
+            @media (min-width: 576px){
+                .ah3{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            @media (min-width: 768px){
+                .ah3{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            @media (min-width: 992px){
+                .ah3{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            @media (min-width: 1200px){
+                .ah3{
+                    flex: 0 0 auto;
+                    width: 25%;
+                }
+            }
+            .ah4{
+                margin: 0 0 20px;
+                text-align: left;
+            }
+            .ah5{
+                font-size: 35px;
+                font-family: serif;
+                font-weight: 900;
+                color: rgb(176 0 32);
+            }
+            .ah6{
+                list-style: disc;
+                padding-left: 26px;
+                position: relative;
+            }
+            .ah7{
+                position: relative;
+                border-bottom: 1px solid rgb(199, 198, 198);
+                max-width: 90%;
+            }
+            .ah8{
+                display: block;
+                font-size: 12px;
+                font-family: sans-serif;
+                margin: 0 0 5px;
+                width: max-content;
+                font-weight: 400;
+            }
+            .ah9{
+                color: black;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .ai1{
+                font-size: 10px;
+                font-weight: bold;
+                text-transform: uppercase;
+                display: inline-block;
+                font-family: sans-serif;
+                color: black;
+                margin: 20px 10px;
+                text-decoration: underline;
+            }
+            #af32{
+                margin-left: 10px;
+                width: 320px;
+            }
+            .ai2{
+                display: block!important;
+            }
+            @media (min-width: 576px){
+                .ai2{
+                    display: block!important;
+                }
+            }
+            @media (min-width: 992px){
+                .ai2{
+                    display: block!important;
+                }
+            }
+            @media (min-width: 1200px){
+                .ai2{
+                    display: block!important;
+                }
+            }
+            .ai3{
+                min-height: 122px;
+                width: 95%;
+                border-bottom: 1px solid rgb(199, 198, 198);
+                margin-left: 10px;
+            }
+            .ai4{
+                text-transform: uppercase;
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size: 14px;
+                text-align: left;
+                margin: 15px 0 5px;
+                background: rgb(0 0 0 / 55%);
+                padding: 4px 7px 3px;
+                width: max-content;
+                color: white;
+            }
+            .ai5{
+                background-image: url(https://t4.ftcdn.net/jpg/01/44/67/75/360_F_144677596_QJEsoGu2jNbDYic6QyYKcj8Evyh3356K.jpg);
+                padding: 25px 0 10px;
+            }
+            .ai6{
+                padding: 0 0.75rem;
+                margin: 0 auto;
+                width: 100%;
+            }
+            @media (min-width: 576px){
+                .ai6{
+                    max-width: 540px;
+                }
+            }
+            @media (min-width: 768px){
+                .ai6{
+                    max-width: 720px;
+                }
+            }
+            @media (min-width: 992px){
+                .ai6{
+                    max-width: 960px;
+                }
+            }
+            @media (min-width: 1200px){
+                .ai6{
+                    max-width: 1140px;
+                }
+            }
+            @media (min-width: 1400px){
+                .ai6{
+                    max-width: 1320px;
+                }
+            }
+            .ai6{
+                max-width: 1300px;
+            }
+            .ai7{
+                height: 85px;
+                position: relative;
+            }
+            .ai8{
+                position: relative;
+                z-index: 2;
+                text-align: center;
+                margin: 0 auto 10px;
+                padding: 0 20px;
+                width: max-content;
+                max-width: 90%;
+                background-color: transparent;
+            }
+            .ai9{
+                color: rgb(176 0 32);
+                font-size: 38px;
+                display: block;
+                font-size: 30px;
+                font-family: serif;
+                font-weight: 900;
+            }
+            .aj1{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 0 calc(1.5rem * -0.5);
+            }
+            .aj2{
+                max-width: 100%;
+                flex: 0 0 auto;
+                width: 100%;
+            }
+            @media (min-width: 576px){
+                .aj2{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            @media (min-width: 768px){
+                .aj2{
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
+            }
+            @media (min-width: 992px){
+                .aj2{
+                    flex: 0 0 auto;
+                    width: 25%;
+                }
+            }
+            @media (min-width: 1200px){
+                .aj2{
+                    flex: 0 0 auto;
+                    width: 25%;
+                }
+            }
+            .aj3{
+                width: 95%;
+            }
+            .aj4{
+                width: 100%;
+                height: auto;
+                margin: 10px 0 15px;
+                position: relative;
+            }
+            .aj5{
+                text-transform: uppercase;
+                text-align: left;
+                margin: 15px 0 5px;
+            }
+            .aj6{
+                color: rgb(176 0 32);
+                font-weight: bold;
+                font-size: 14px;
+                font-family: sans-serif;
+            }
+            .aj7{
+                line-height: normal;
+                text-align: left;
+                margin: 10px 0 20px;
+            }
+            .aj8{
+                font-family: "Merriweather",serif;
+                font-size: 22px;
+                letter-spacing: -0.4px;
+                color: #000;
+                font-weight: normal;
+            }
+            @media (min-width: 1200px){
+                .aj8{
+                    font-size: 1.75rem;
+                }
+            }
+            .aj9{
+                font-size: 10px;
+                letter-spacing: 1px;
+                text-align: left;
+                margin: 15px 0;
+                line-height: 14px;
+                text-transform: uppercase;
+                text-decoration: underline;
+            }
+            .ak1{
+                display: block;
+                text-align: center;
+                margin: 30px auto 50px;
+                font-weight: normal;
+                position: relative;
+                width: 100%;
+                padding: 15px 0 9px;
+            }
+            .ak2{
+                font-size: 14px;
+                color: black;
+                font-family: "Merriweather Sans",sans-serif;
+                font-weight: bold;
+                text-decoration: underline;
+                text-transform: uppercase;
+                position: relative;
+            }
+            @media (min-width: 1200px) {
+                h1 {
+                    font-size: 2.5rem;
+                }
+            }
+            @media (min-width: 1200px) {
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+            @media (min-width: 1200px) {
+                h3 {
+                    font-size: 1.75rem;
+                }
+            }
+            @media (min-width: 1200px) {
+                h4 {
+                    font-size: 1.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="aa1">
+            <div class="aa2">
+                <div class="aa3">
+                    <div class="aa4">
+                        <a href="https://www.thehindu.com/">
+                            <img src="https://www.thehindu.com/theme/images/th-online/thehindu-logo.svg" class="aa5">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="aa6">
+                <div class="aa7">
+                    <nav class="aa8">
+                        <div class="aa9">
+                            <ul class="ab1">
+                                <li class="ab2">
+                                    <a class="ab3" href="https://www.thehindu.com/news/national/">India</a>
+                                </li>
+                                <li class="ab2">
+                                    <a class="ab3" href="https://www.thehindu.com/news/international/">World</a>
+                                </li>
+                                <li class="ab2">
+                                    <a class="ab3" href="https://www.thehindu.com/opinion/">Opinion</a>
+                                </li>
+                                <li class="ab2">
+                                    <a class="ab3" href="https://www.thehindu.com/sport/">Sports</a>
+                                </li>
+                                <li class="ab2">
+                                    <a class="ab3" id="ab31" href="https://epaper.thehindu.com/?utm_source=Hindu&utm_medium=Menu&utm_campaign=Header" target="_blank">e-Paper</a>
+                                </li>
+                            </ul>
+                            <div>
+                                <ol class="ab4">
+                                    <li class="ab5">
+                                        <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/" class="ab6">
+                                            ICC WORLD CUP / 
+                                        </a>
+                                    </li>
+                                    <li class="ab5">
+                                        <a href="https://www.thehindu.com/elections/" class="ab6">
+                                            ELECTIONS / 
+                                        </a>
+                                    </li>
+                                    <li class="ab5">
+                                        <a href="https://www.thehindu.com/sci-tech/health/" class="ab6">
+                                            HEALTH / 
+                                        </a>
+                                    </li>
+                                    <li class="ab5">
+                                        <a href="https://www.thehindu.com/opinion/editorial/" class="ab6">
+                                            EDITORIAL
+                                        </a>
+                                    </li>
+                                    <li class="ab7">
+                                        <a href="https://www.thehindu.com/search/">SEARCH
+                                            <img class="ab8" src="https://www.thehindu.com/theme/images/th-online/search-gray-icon.svg">
+                                        </a>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="ac1">
+                                <img src="https://www.thehindu.com/theme/images/th-online/h-circle-yellow-new.svg" class="ac3">
+                                <a href="https://www.thehindu.com/subscription/freetrial/">
+                                    <button type="button" class="ac2">FREE TRIAL</button>
+                                </a>
+                                <a href="https://www.thehindu.com/subscription/">
+                                    <button type="button" class="ac4">SUBSCRIBE</button>
+                                </a>
+                                <button type="button" class="ac5">LOGIN</button> 
+                            </div>
+                            <div class="ac6">
+                                <img class="ac7" src="https://www.thehindu.com/theme/images/th-online/menu-hamber-icon.svg">
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div style="height: 220px;"></div>
+        <div class="ac8"></div>
+        <section class="ad1">
+            <div class="ad2">
+                <iframe src="https://sportstar.thehindu.com/cf-widgets/3235/thehindu" width="100%" style="height: 164px;" frameborder="0" scrolling="no"></iframe>
+                <div></div>
+            </div>
+        </section>
+        <section class="ad3">
+            <div class="ad2" id="ad21">
+                <div class="ad4">
+                    <div class="ad5">
+                        <div class="ad6">
+                            <div class="ad7">
+                                <h4 class="ad8">
+                                    <a href="/premium/" class="ae1">Premium</a>
+                                </h4>
+                                <div class="ad9">
+                                    <h3 class="ae3">
+                                        <a href="https://www.thehindu.com/news/international/why-are-people-fleeing-myanmar-for-mizoram-explained/article67548631.ece" class="ae2">
+                                            Why are people fleeing Myanmar for Mizoram? | Explained
+                                        </a>
+                                    </h3>
+                                    <div class="ae4">
+                                        <a href="https://www.thehindu.com/profile/author/Srinivasan-Ramani-384/" class="ae5">Srinivasan Ramani</a>
+                                    </div>
+                                    <div class="ae6">
+                                        <a href="https://www.thehindu.com/profile/author/Srinivasan-Ramani-384/" class="ae7">
+                                            <img alt="Srinivasan Ramani" src="https://th-i.thgim.com/public/migration_catalog/article10285122.ece/alternates/SQUARE_80/Mani" data-src-template="https://th-i.thgim.com/public/migration_catalog/article10285122.ece/alternates/SQUARE_80/Mani" class="ae8">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="ad9">
+                                    <h3 class="ae3">
+                                        <a href="https://www.thehindu.com/sport/cricket/what-led-icc-to-suspend-sri-lanka-cricket-explained/article67548636.ece" class="ae2">
+                                            What led ICC to suspend Sri Lanka Cricket? | Explained
+                                        </a>
+                                    </h3>
+                                    <div class="ae4">
+                                        <a href="https://www.thehindu.com/profile/author/N--Sudarshan-439/" class="ae5">N. Sudarshan</a>
+                                    </div>
+                                </div>
+                                <div class="ad9">
+                                    <h3 class="ae3">
+                                        <a href="https://www.thehindu.com/news/international/david-cameron-comeback-conservative/article67548748.ece" class="ae2">
+                                            David Cameron | Comeback conservative
+                                        </a>
+                                    </h3>
+                                    <div class="ae4">
+                                        <a href="https://www.thehindu.com/profile/author/Priyali-Prakash-15620/" class="ae5">Priyali Prakash</a>
+                                    </div>
+                                </div>
+                                <div class="ad9" id="ad91">
+                                    <h3 class="ae3">
+                                        <a href="https://www.thehindu.com/sci-tech/science/first-monkey-chimaera-pluripotent-stem-cells-organ-transplants/article67550587.ece" class="ae2">
+                                            The chimaeras of nature and their promise to grow human organs | Explained
+                                        </a>
+                                    </h3>
+                                    <div class="ae4">
+                                        <a href="https://www.thehindu.com/profile/author/Sridhar-Sivasubbu-19316/" class="ae5">Sridhar Sivasubbu,</a>
+                                        <a href="https://www.thehindu.com/profile/author/Vinod-Scaria-14313/" class="ae5">Vinod Scaria</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="af3">
+                                <hr>
+                                <hr>
+                                <hr>
+                            </div>
+                            <div class="af5">
+                                <div class="af6">
+                                    <div class="af7">
+                                        <a href="https://www.thehindu.com/news/national/other-states/" class="af2">Other States</a>
+                                    </div>
+                                    <h3 class="af8">
+                                        <a href="https://www.thehindu.com/news/national/other-states/canopy-solution-to-restart-drilling-in-uttarkashi-tunnel-rescue-says-nitin-gadkari/article67550894.ece" class="af9">
+                                            'Canopy' solution to resume drilling of Uttarkashi tunnel rubble, says Highways Secretary
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="af6">
+                                    <div class="af7">
+                                        <a href="https://www.thehindu.com/news/national/" class="af2">India</a>
+                                    </div>
+                                    <h3 class="af8">
+                                        <a href="https://www.thehindu.com/news/national/self-regulation-provisions-in-draft-broadcasting-bill-draw-diverse-views/article67550941.ece" class="af9">
+                                            Self-regulation provisions in draft broadcasting Bill draw diverse views
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="af6">
+                                    <div class="af7">
+                                        <a href="https://www.thehindu.com/news/national/" class="af2">India</a>
+                                    </div>
+                                    <h3 class="af8">
+                                        <a href="https://www.thehindu.com/news/national/all-22-fishermen-held-by-sri-lankan-navy-freed-heading-back-home/article67550157.ece" class="af9">
+                                            All 22 Indian fishermen held by Sri Lankan Navy freed
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ag1">
+                        <div class="ag8">
+                            <div class="ag2">
+                                <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/" class="ag3">ICC World Cup</a>
+                            </div>
+                            <h1 class="ag4">
+                                <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/icc-cricket-world-cup-2023-india-vs-australia-final-in-ahmedabad-on-november-19-2023/article67550515.ece" class="ag5">
+                                    ICC World Cup | Australia defeats India by six wickets to win sixth title
+                                </a>
+                            </h1>
+                            <div class="ag6">
+                                <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/icc-cricket-world-cup-2023-india-vs-australia-final-in-ahmedabad-on-november-19-2023/article67550515.ece" class="ag7">
+                                    Travis Head and Marnus Labuschagne stitched a 192 run partnership for the fourth wicket.
+                                </a>
+                            </div>
+                            <div class="ae4">
+                                <div>
+                                    <a href="https://www.thehindu.com/profile/author/K-C--Vijaya-Kumar-757/" class="ae5">
+                                        K C Vijaya Kumar
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/icc-cricket-world-cup-2023-india-vs-australia-final-in-ahmedabad-on-november-19-2023/article67550515.ece">
+                                <div>
+                                    <img src="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/1xcp9b/article67552088.ece/alternates/LANDSCAPE_960/01Cup.jpg" data-src-template="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/1xcp9b/article67552088.ece/alternates/SQUARE_80/01Cup.jpg" data-original="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/1xcp9b/article67552088.ece/alternates/SQUARE_80/01Cup.jpg" data-device-variant="LANDSCAPE~LANDSCAPE~LANDSCAPE~LANDSCAPE" alt="Australia’s Pat Cummins receives the World Cup trophy from the Prime Minister Narendra Modi and Australian deputy Prime Minister Richard Marles, in Ahmedabad on November 19, 2023." title="Australia’s Pat Cummins receives the World Cup trophy from the Prime Minister Narendra Modi and Australian deputy Prime Minister Richard Marles, in Ahmedabad on November 19, 2023." width="100%" height="100%">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ag9">
+                            <div class="ah1">
+                                <div class="ah2">
+                                    <h3 class="ae3">
+                                        <a href="https://www.thehindu.com/news/national/sc-to-hear-pleas-of-tn-kerala-governments-on-delay-by-governors-in-giving-assent-to-bills-on-nov-20/article67550900.ece" class="ae2">
+                                            <strong>Supreme Court to hear Tamil Nadu, Kerala pleas against their Governors on November 20</strong>
+                                        </a>
+                                    </h3>
+                                    <a href="https://www.thehindu.com/news/national/sc-to-hear-pleas-of-tn-kerala-governments-on-delay-by-governors-in-giving-assent-to-bills-on-nov-20/article67550900.ece">
+                                        <div>
+                                            <img src="https://th-i.thgim.com/public/news/national/yupz4p/article67550909.ece/alternates/LANDSCAPE_435/IMG_CJI_Justice_DY_Chand_2_1_CJC1AGCE.jpg" data-src-template="https://th-i.thgim.com/public/news/national/yupz4p/article67550909.ece/alternates/SQUARE_80/IMG_CJI_Justice_DY_Chand_2_1_CJC1AGCE.jpg" data-original="https://th-i.thgim.com/public/news/national/yupz4p/article67550909.ece/alternates/SQUARE_80/IMG_CJI_Justice_DY_Chand_2_1_CJC1AGCE.jpg" data-device-variant="LANDSCAPE~LANDSCAPE~LANDSCAPE~LANDSCAPE" alt="A bench of Chief Justice D.Y. Chandrachud and Justices J B Pardiwala and Manoj Misra is scheduled to hear the Tamil Nadu and Kerala governments’ plea on ‘delay’ by Governor in giving assent to bills." title="A bench of Chief Justice D.Y. Chandrachud and Justices J B Pardiwala and Manoj Misra is scheduled to hear the Tamil Nadu and Kerala governments’ plea on ‘delay’ by Governor in giving assent to bills." width="95%" height="100%">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ah1">
+                                <div class="ah2">
+                                    <h3 class="ae3">
+                                        <a href="https://www.thehindu.com/news/cities/Delhi/delhi-struggles-to-breathe-easy-as-air-turns-toxic/article67551491.ece" class="ae2">
+                                            <strong>Delhi struggles to breathe easy as air turns toxic</strong>
+                                        </a>
+                                    </h3>
+                                    <div class="ae4" id="ae42">
+                                        <div>
+                                            <a href="https://www.thehindu.com/profile/author/Nikhil-M-Babu-6155/" class="ae5">Nikhil M Babu</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ah2">
+                                    <div>
+                                        <h2 class="ag3">LIVE</h2>
+                                    </div>
+                                    <h3 class="ae3">
+                                        <a href="https://www.thehindu.com/news/international/israel-hamas-war-live-updates-day-44-nov-19-2023/article67550094.ece" class="ae2">
+                                            <strong>Israel-Hamas war, Day 44 updates | Yemen rebels say they seized Israeli vessel, Israel denies</strong>
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ah3">
+                        <div>
+                            <h2 class="ah4">
+                                <a href="https://www.thehindu.com/latest-news/" class="ah5">Latest News</a>
+                            </h2>
+                            <ul class="ah6">
+                                <li class="ah7">
+                                    <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/icc-world-cup-i-wasnt-invited-for-the-final-kapil-dev/article67552064.ece" class="ah9">
+                                        <span class="ah8">
+                                            <span>21 hours ago</span>
+                                            -
+                                            ICC World Cup
+                                        </span>
+                                        India vs Australia | I wasn't invited for the final, says former captain Kapil Dev
+                                    </a>
+                                </li>
+                                <li class="ah7">
+                                    <a href="https://www.thehindu.com/elections/madhya-pradesh-assembly/madhya-pradesh-assembly-polls-re-polling-ordered-at-a-booth-in-ater-constituency/article67551998.ece" class="ah9">
+                                        <span class="ah8">
+                                            <span>21 hours ago</span>
+                                            -
+                                            Madhya Pradesh Assembly
+                                        </span>
+                                        Madhya Pradesh Assembly polls: Re-polling ordered at a booth in Ater constituency
+                                    </a>
+                                </li>
+                                <li class="ah7">
+                                    <a href="https://www.thehindu.com/news/national/over-930-firs-registered-against-farmers-for-burning-stubble-punjab-police/article67551724.ece" class="ah9">
+                                        <span class="ah8">
+                                            <span>21 hours ago</span>
+                                            -
+                                            India
+                                        </span>
+                                        Over 930 FIRs registered against farmers for burning stubble: Punjab Police
+                                    </a>
+                                </li>
+                                <li class="ah7">
+                                    <a href="https://www.thehindu.com/news/national/other-states/notebook-on-rivers-wins-literary-award-in-west-bengal/article67551716.ece" class="ah9">
+                                        <span class="ah8">
+                                            <span>22 hours ago</span>
+                                            -
+                                            Other States
+                                        </span>
+                                        'Notebook on rivers' wins literary award in West Bengal
+                                    </a>
+                                </li>
+                                <li class="ah7">
+                                    <a href="https://www.thehindu.com/news/cities/Delhi/delhi-struggles-to-breathe-easy-as-air-turns-toxic/article67551491.ece" class="ah9">
+                                        <span class="ah8">
+                                            <span>22 hours ago</span>
+                                            -
+                                            Delhi
+                                        </span>
+                                        Delhi struggles to breathe easy as air turns toxic
+                                    </a>
+                                </li>
+                            </ul>
+                            <a class="ai1" href="https://www.thehindu.com/latest-news/">READ MORE STORIES</a>
+                        </div>
+                        <div class="af3" id="af32">
+                            <hr>
+                            <hr>
+                            <hr>
+                        </div>
+                        <div class="ai2"></div>
+                        <div>
+                            <div>
+                                <div class="ai3">        
+                                    <div class="ai4">SPONSORED</div>
+                                    <h3 class="af8">
+                                        <a href="https://www.thehindu.com/brandhub/dr-vetrikumar-from-parvathy-hospital-performed-a-miraculous-surgery-and-successfully-treated-a-complex-bilateral-osteoarthritis-case/article67543427.ece" class="af9" target="_top" title="Dr Vetrikumar from Parvathy Hospital Performed a Miraculous Surgery and Successfully treated a Complex Bilateral Osteoarthritis case">
+                                            Dr Vetrikumar from Parvathy Hospital Performed a Miraculous Surgery and Successfully treated a Complex Bilateral Osteoarthritis case
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="ai3">
+                                    <div class="ai4">SPONSORED</div>
+                                    <h3 class="af8">
+                                        <a href="https://www.thehindu.com/brandhub/top-10-mattresses-in-india-detailed-review-and-analysis-updated2023/article67544266.ece" class="af9" target="_top" title="Top 10 Mattresses in India- Detailed Review and Analysis - Updated(2023)">
+                                            Top 10 Mattresses in India- Detailed Review and Analysis - Updated(2023)
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ai5">
+            <div class="ai6">
+                <div class="ai7">
+                    <h2 class="ai8">
+                        <span class="ai9">ICC World Cup 2023</span>
+                    </h2>
+                </div>
+                <div class="aj1">
+                    <div class="aj2">
+                        <div class="aj3">
+                            <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/icc-world-cup-i-wasnt-invited-for-the-final-kapil-dev/article67552064.ece">
+                                <div class="aj4">
+                                    <img src="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/5ytd51/article67552061.ece/alternates/LANDSCAPE_300/IMG_16_Kapil_dev_1983_2_1_JCA3IPNM.jpg" data-src-template="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/5ytd51/article67552061.ece/alternates/SQUARE_80/IMG_16_Kapil_dev_1983_2_1_JCA3IPNM.jpg" data-original="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/5ytd51/article67552061.ece/alternates/SQUARE_80/IMG_16_Kapil_dev_1983_2_1_JCA3IPNM.jpg" data-device-variant="LANDSCAPE~LANDSCAPE~LANDSCAPE~SQUARE" alt="Kapil Dev with the 1983 World Cup trophy. File" title="Kapil Dev with the 1983 World Cup trophy. File" width="100%" height="100%">
+                                </div>
+                            </a>
+                            <div class="aj5">
+                                <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/" class="aj6">ICC World Cup</a>
+                            </div>
+                            <h3 class="aj7">
+                                <a class="aj8" href="https://www.thehindu.com/sport/cricket/icc-world-cup/icc-world-cup-i-wasnt-invited-for-the-final-kapil-dev/article67552064.ece">
+                                    ICC World Cup | I wasn't invited for the final, says former captain Kapil Dev
+                                </a>
+                            </h3>
+                            <div class="aj9">
+                                <div>
+                                    <a>PTI</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aj2">
+                        <div class="aj3">
+                            <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/icc-world-cup-finals-key-points-how-australia-managed-to-dominate-mighty-indian-batting-unit/article67551187.ece">
+                                <div class="aj4">
+                                    <img src="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/4cktjc/article67551216.ece/alternates/LANDSCAPE_300/PTI11_19_2023_000617A.jpg" data-src-template="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/4cktjc/article67551216.ece/alternates/SQUARE_80/PTI11_19_2023_000617A.jpg" data-original="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/4cktjc/article67551216.ece/alternates/SQUARE_80/PTI11_19_2023_000617A.jpg" data-device-variant="LANDSCAPE~LANDSCAPE~LANDSCAPE~SQUARE" alt="Fans are seen during the ICC Cricket World Cup 2023 finals between India and Australia in Ahmedabad on November 19, 2023." title="Fans are seen during the ICC Cricket World Cup 2023 finals between India and Australia in Ahmedabad on November 19, 2023." width="100%" height="100%">
+                                </div>
+                            </a>
+                            <div class="aj5">
+                                <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/" class="aj6">ICC World Cup</a>
+                            </div>
+                            <h3 class="aj7">
+                                <a class="aj8" href="https://www.thehindu.com/sport/cricket/icc-world-cup/icc-world-cup-finals-key-points-how-australia-managed-to-dominate-mighty-indian-batting-unit/article67551187.ece">
+                                    ICC World Cup finals | Key points: How Australia managed to dominate mighty Indian batting unit
+                                </a>
+                            </h3>
+                            <div class="aj9">
+                                <div>
+                                    <a>PTI</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aj2">
+                        <div class="aj3">
+                            <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/icc-world-cup-spectator-invades-field-of-play-during-india-australia-final-to-meet-virat-kohli/article67550843.ece">
+                                <div class="aj4">
+                                    <img src="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/9ggvbw/article67550850.ece/alternates/LANDSCAPE_300/India_Cricket_WCup_83119.jpg" data-src-template="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/9ggvbw/article67550850.ece/alternates/SQUARE_80/India_Cricket_WCup_83119.jpg" data-original="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/9ggvbw/article67550850.ece/alternates/SQUARE_80/India_Cricket_WCup_83119.jpg" data-device-variant="LANDSCAPE~LANDSCAPE~LANDSCAPE~SQUARE" alt="A spectator wearing a t-shirt saying ‘Stop Bombing Palestine’ runs on to the pitch as Virat Kohli looks on during the ICC Cricket World Cup final between Australia and India in Ahmedabad on November 19, 2023." title="A spectator wearing a t-shirt saying ‘Stop Bombing Palestine’ runs on to the pitch as Virat Kohli looks on during the ICC Cricket World Cup final between Australia and India in Ahmedabad on November 19, 2023." width="100%" height="100%">
+                                </div>
+                            </a>
+                            <div class="aj5">
+                                <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/" class="aj6">ICC World Cup</a>
+                            </div>
+                            <h3 class="aj7">
+                                <a class="aj8" href="https://www.thehindu.com/sport/cricket/icc-world-cup/icc-world-cup-spectator-invades-field-of-play-during-india-australia-final-to-meet-virat-kohli/article67550843.ece">
+                                    ICC World Cup | Pro-Palestine pitch invader apprehended by security
+                                </a>
+                            </h3>
+                            <div class="aj9">
+                                <div>
+                                    <a href="https://www.thehindu.com/profile/author/Sports-Bureau-307/" style="color: black;text-decoration: underline;">Sports Bureau</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aj2">
+                        <div class="aj3">
+                            <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/icc-world-cup-finals-narendra-modi-stadium-turns-sea-of-blue-to-watch-india-in-red-hot-form/article67550710.ece">
+                                <div class="aj4">
+                                    <img src="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/itovxu/article67550722.ece/alternates/LANDSCAPE_300/20231119065L.jpg" data-src-template="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/itovxu/article67550722.ece/alternates/SQUARE_80/20231119065L.jpg" data-original="https://th-i.thgim.com/public/sport/cricket/icc-world-cup/itovxu/article67550722.ece/alternates/SQUARE_80/20231119065L.jpg" data-device-variant="LANDSCAPE~LANDSCAPE~LANDSCAPE~SQUARE" alt="Fans throng Narendra Modi Stadium during the ICC Men’s Cricket World Cup 2023 final match between India and Australia, at Narendra Modi Stadium in Ahmedabad on November 19, 2023." title="Fans throng Narendra Modi Stadium during the ICC Men’s Cricket World Cup 2023 final match between India and Australia, at Narendra Modi Stadium in Ahmedabad on November 19, 2023." width="100%" height="100%">
+                                </div>
+                            </a>
+                            <div class="aj5">
+                                <a href="https://www.thehindu.com/sport/cricket/icc-world-cup/" class="aj6">ICC World Cup</a>
+                            </div>
+                            <h3 class="aj7">
+                                <a class="aj8" href="https://www.thehindu.com/sport/cricket/icc-world-cup/icc-world-cup-finals-narendra-modi-stadium-turns-sea-of-blue-to-watch-india-in-red-hot-form/article67550710.ece">
+                                    ICC World Cup finals | Narendra Modi stadium turns sea of blue to watch India in red hot form
+                                </a>
+                            </h3>
+                            <div class="aj9">
+                                <div>
+                                    <a>PTI</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="ak1" href="/sport/cricket/icc-world-cup/">
+                    <span class="ak2">
+                        SEE MORE ➔
+                    </span>
+                </a>
+            </div>
+        </section>
+    </body>
+</html>
